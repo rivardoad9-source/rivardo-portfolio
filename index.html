@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rivardo — Accounting &amp; AI Automation</title>
-<meta name="description" content="Rivardo — Digital Business student focused on accounting and AI-agent automation for finance, crypto and Web3 market monitoring." />
+<title>Rivardo — AI Automation &amp; Accounting</title>
+<meta name="description" content="Rivardo — Digital Business student building AI-agent automation for finance, small-business operations and crypto/Web3 market monitoring." />
 <style>
   :root{
     --ink:#08090c; --panel:#111318; --line:#23262e; --paper:#eef1f5;
@@ -27,6 +27,8 @@
      margin:34px 0 14px; font-weight:700}
   .card{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 20px; margin-bottom:12px}
   .card h3{margin:0 0 2px; font-size:16px}
+  .card h3 a{color:var(--paper); text-decoration:none; border-bottom:1px solid var(--line)}
+  .card h3 a:hover{color:var(--accent); border-color:var(--accent)}
   .card .meta{color:var(--muted); font-size:13px; margin:0 0 10px}
   ul{margin:0; padding-left:18px}
   li{margin-bottom:6px; font-size:14.5px; color:#d7dce5}
@@ -45,35 +47,98 @@
 <div class="wrap">
   <header>
     <h1>Rivardo</h1>
-    <p class="role">Digital Business Student &nbsp;|&nbsp; Accounting &amp; AI Automation</p>
+    <p class="role">Digital Business Student &nbsp;|&nbsp; AI-Agent Automation &amp; Accounting</p>
     <div class="contact">
       <span>Bekasi Utara, West Java, Indonesia</span>
       <a href="mailto:rivardo.ad9@gmail.com">rivardo.ad9@gmail.com</a>
+      <a href="https://github.com/rivardoad9-source">GitHub</a>
       <span>@rvo.d</span>
     </div>
   </header>
 
   <h2>About</h2>
   <p>Digital Business student at Universitas Bunda Mulia with an accounting foundation from SMK.
-     I build and operate AI-agent automations for finance and crypto/Web3 market monitoring, and I work
-     daily with accounting systems (Accurate, MYOB) and AI tooling. Disciplined with SOPs, quick to adopt
-     new workflows, and used to communicating with clients and teams.</p>
+     I build and operate AI-agent systems end to end: scheduled pipelines that collect data, check conditions,
+     act, and report only when something actually changes. That work spans finance, small-business operations
+     and crypto/Web3 market monitoring. I work daily with accounting systems (Accurate, MYOB) and AI tooling,
+     and I am disciplined with SOPs and used to communicating with clients.</p>
 
   <h2>Projects — AI &amp; Automation</h2>
   <div class="card">
-    <h3>AI Agent Automation for Finance &amp; Market Monitoring</h3>
-    <p class="meta">Self-directed &nbsp;·&nbsp; ongoing</p>
+    <h3>Sistem Rapel — customer-service &amp; order automation for small businesses</h3>
+    <p class="meta">Self-directed &nbsp;·&nbsp; 2026 – ongoing &nbsp;·&nbsp; private repo, demo on request</p>
     <ul>
-      <li>Built and operate a personal AI-agent stack (Hermes Agent, CLI) running scheduled workflows end to
-          end: data collection, condition checks and automated reporting.</li>
-      <li>Set up crypto/Web3 market and on-chain monitoring pipelines that track wallet and token activity,
-          and alert only when something actually changes — cutting notification noise.</li>
-      <li>Use AI CLI tools daily for research, data verification and report drafting.</li>
+      <li>One logic core with two channel adapters — Telegram for demos, WhatsApp Cloud API for production —
+          so the same rules serve every channel.</li>
+      <li>Answers the majority of customer messages with deterministic rules instead of an LLM: instant replies,
+          zero per-message cost, covering the owner's own prices, stock, delivery areas and opening hours.</li>
+      <li>Learning loop: unanswered chats are clustered into proposed rules that only go live after the owner
+          approves them, with the config backed up first. 25 of 25 local test scenarios pass.</li>
     </ul>
     <div class="tags">
-      <span class="tag">AI agents</span><span class="tag">Automation</span><span class="tag">CLI</span>
-      <span class="tag key">On-chain analysis</span><span class="tag key">Web3</span><span class="tag key">DeFi</span>
+      <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Telegram Bot API</span>
+      <span class="tag key">WhatsApp Cloud API</span><span class="tag key">Small-business ops</span>
     </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/rivardoad9-source/trading-crypto-quant">FlowMetrix — Solana DLMM liquidity screener &amp; paper-trading engine</a></h3>
+    <p class="meta">Self-directed &nbsp;·&nbsp; 2026</p>
+    <ul>
+      <li>Screens Meteora DLMM pools and runs a zero-capital paper-trading engine with a walk-forward
+          backtest harness.</li>
+      <li>Position sizing and guard rules are config-driven rather than hardcoded, so risk settings can be
+          changed without touching the engine.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag key">Solana</span>
+      <span class="tag key">DeFi / DLMM</span><span class="tag key">Backtesting</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3><a href="https://github.com/rivardoad9-source/NewsAgent">MacroAI — automated US macro release monitor</a></h3>
+    <p class="meta">Self-directed &nbsp;·&nbsp; 2026</p>
+    <ul>
+      <li>Tracks FOMC, CPI, PPI, NFP and GDP releases and converts them into an objective
+          Bullish / Bearish / Neutral bias through a deterministic rule table.</li>
+      <li>Telegram alerts fire only when the bias actually changes; a Streamlit dashboard presents the state
+          without holding any verdict logic of its own. Offline fixture-based test suite.</li>
+    </ul>
+    <div class="tags">
+      <span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">FRED API</span>
+      <span class="tag key">Macro / markets</span><span class="tag">Telegram Bot API</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Dompet — mobile-first personal finance dashboard (PWA)</h3>
+    <p class="meta">Self-directed &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+      <a href="https://github.com/rivardoad9-source/dompet-dashboard">repository</a></p>
+    <ul>
+      <li>Records transactions, budgets and savings targets, built for phone use first.</li>
+    </ul>
+    <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">PWA</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Re-Bites — landing page, realtime POS &amp; sales dashboard</h3>
+    <p class="meta">Client project &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+      <a href="https://github.com/rivardoad9-source/Rebites">repository</a></p>
+    <ul>
+      <li>Realtime point-of-sale and sales dashboard for a food brand, with Google Sheets as the data layer.</li>
+    </ul>
+    <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Google Sheets</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Indonesia industry report 2026–2031</h3>
+    <p class="meta">Self-directed research &nbsp;·&nbsp; 2026 &nbsp;·&nbsp;
+      <a href="https://github.com/rivardoad9-source/indonesia-industry-report-2026-2031">repository</a></p>
+    <ul>
+      <li>Researched and wrote an industry outlook report, published as HTML and PDF.</li>
+    </ul>
+    <div class="tags"><span class="tag">Research</span><span class="tag">HTML / PDF</span></div>
   </div>
 
   <h2>Experience</h2>
@@ -104,25 +169,30 @@
     </div>
     <div class="card">
       <h3>AI &amp; Automation</h3>
-      <p class="meta">AI CLI agents (Hermes Agent) · workflow automation · scheduled data pipelines ·
-         prompt-based reporting</p>
+      <p class="meta">AI CLI agents (Hermes Agent, Claude Code) · deterministic rule engines · scheduled
+         workflows · change-gated alerting · prompt-based reporting</p>
     </div>
     <div class="card">
-      <h3>Web3 &amp; Blockchain</h3>
-      <p class="meta">on-chain data analysis · blockchain wallet &amp; transaction tracking · cryptocurrency
-         market monitoring · DeFi LP position tracking</p>
+      <h3>Software &amp; Data</h3>
+      <p class="meta">Python · TypeScript / Node.js · Next.js · SQLite · REST APIs &amp; webhooks ·
+         Telegram Bot API · WhatsApp Cloud API · Git / GitHub</p>
+    </div>
+    <div class="card">
+      <h3>Web3 &amp; Markets</h3>
+      <p class="meta">on-chain data analysis · wallet &amp; transaction tracking · cryptocurrency
+         market monitoring · DeFi LP position economics · macro-event monitoring</p>
     </div>
     <div class="card">
       <h3>Office &amp; Personal</h3>
       <p class="meta">Microsoft Office (Excel, Word) · document control · basic technical &amp; market analysis ·
-         SOP discipline · client communication · critical thinking</p>
+         SOP discipline · client communication · fast learner</p>
     </div>
   </div>
 
   <h2>Education</h2>
   <div class="card">
     <h3>Universitas Bunda Mulia — S1 Digital Business</h3>
-    <p class="meta">in progress</p>
+    <p class="meta">in progress (semester 5)</p>
   </div>
   <div class="card">
     <h3>SMK Ananda Bekasi — Accounting</h3>
